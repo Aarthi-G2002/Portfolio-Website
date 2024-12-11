@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+<nav>
+    <div class="logo">My Portfolio</div>
+    <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#project" class="nav-link">Project</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h1 style="color: orangered;">Welcome to My Portfolio</h1>
+    <h3>Discover my journey, skills, and professional projects.</h3>
+    <p>Learn More</p>
+</section>
+
+<section id="about">
+    <h2 style="color: orangered;">About Me</h2>
+
+    <div style="display: flex; align-items: center; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <img src="image/portfolio1.jpeg" alt="About Me">
+       <p>
+            "I am a passionate web developer with expertise in creating professional and engaging websites. 
+            I specialize in front-end and back-end development and have a keen interest in creating 
+            user-centric designs. My journey as a developer started with a curiosity for coding, and 
+            I have since honed my skills to build impactful solutions. I believe in continuous learning 
+            and staying updated with the latest technologies to deliver modern and efficient web applications. 
+            Collaboration and problem-solving are at the core of my work ethic, ensuring that projects meet both 
+            client and user expectations. My goal is to create seamless digital experiences that leave a lasting impression."
+        </p>
+    </div>
+</section>
+
+<section id="project">
+    <h2 style="color: orangered;">My Projects</h2>
+    <div class="projectcard">
+        <div class="card">
+            <img src="image/portfoliopro1.jpg" alt="E-commerce Website">
+            <h3>E-commerce Website</h3>
+            <p>HTML provides the structure for the website, CSS is used for styling, and JavaScript adds interactivity.</p>
+        </div>
+
+        <div class="card">
+            <img src="image/portfoliopro5.jpg" alt="Portfolio Website">
+            <h3>Portfolio Website</h3>
+            <p>React.js is used to build a dynamic and responsive UI, allowing for smooth navigation and updates without reloads.</p>
+        </div>
+
+        <div class="card">
+            <img src="image/portfoliopro4.jpg" alt="Online Learning Platform">
+            <h3>Online Learning Platform</h3>
+            <p>Angular's component-based architecture and TypeScript ensure a dynamic, maintainable platform.</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 style="color: orangered;">Skills</h2>
+
+    <div class="smallbox">
+        <div class="box">
+            <img src="image/portfolioicon1.png">
+            <p>Proficient in creating semantic and well-structured web pages using modern HTML5 standards.</p>
+        </div>
+        <div class="box">
+            <img src="image/portfolioicon2.png">
+            <p>Skilled in designing visually appealing and responsive layouts with CSS3, including Flexbox and Grid.</p>
+        </div>
+        <div class="box">
+            <img src="image/portfolioicon3.png">
+            <p>Experienced in writing interactive and dynamic functionality using ES6+ features.</p>
+        </div>
+        <div class="box">
+            <img src="image/portfolioicon4.png">
+            <p>Proficient in building reusable components and managing state with React.</p>
+        </div>
+        <div class="box">
+            <img src="image/portfolioicon5.png">
+            <p>Familiar with JavaScript ES6 features and asynchronous programming with promises and async/await.</p>
+        </div>
+        <div class="box">
+            <img src="image/portfolioicon6.png">
+            <p>Skilled in version control systems like Git and collaborative platforms such as GitHub.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 style="color: orangered;">Contact Me</h2>
+
+    <form id="inputbox">
+        <input id="name" type="text" placeholder="Your Name" required>
+        <input id="mail" type="email" placeholder="Your Mail" required>
+        <textarea id="msg" rows="5" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message">
+    </form>
+    <div id="responseMessage"></div>
+</section>
+
+<script src="script.js"></script>
+<script>
+   
+    ScrollReveal({ 
+        reset: true,       
+        distance: '60px',   
+        duration: 500,      
+        delay: 100          
+    });
+
+   
+    ScrollReveal().reveal('#home h1', { delay: 200 });  
+    ScrollReveal().reveal('#home h3', { delay: 400 });  
+    ScrollReveal().reveal('#home p', { delay: 600 });  
+
+    ScrollReveal().reveal('#about h2', { delay: 300 });
+    ScrollReveal().reveal('#about img', { delay: 500 });
+    ScrollReveal().reveal('#about p', { delay: 700 });
+
+    ScrollReveal().reveal('#project h2', { delay: 400 });
+    ScrollReveal().reveal('.card', { interval: 200, delay: 600 });
+
+    ScrollReveal().reveal('#skills h2', { delay: 300 });
+    ScrollReveal().reveal('.box', { interval: 200, delay: 500 });
+
+    ScrollReveal().reveal('#contact h2', { delay: 300 });
+    ScrollReveal().reveal('#inputbox input', { interval: 200, delay: 600 });
+    ScrollReveal().reveal('#inputbox textarea', { delay: 800 });
+    ScrollReveal().reveal('#inputbox input[type="submit"]', { delay: 1000 });
+</script>
+</body>
+</html>
